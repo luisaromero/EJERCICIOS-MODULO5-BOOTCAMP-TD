@@ -11,3 +11,14 @@ FROM reparto_soltera_otra_vez s
 INNER JOIN reparto_papi_ricky p
     ON s.nombre = p.nombre
 ORDER BY s.nombre;
+
+-- 2. Crear una consulta para obtener todos los actores que participaron exclusivamente en
+-- soltera otra vez, con un sueldo mayor a 90.
+
+SELECT nombre, sueldo
+FROM reparto_soltera_otra_vez
+WHERE sueldo > 90
+AND nombre NOT IN (
+    SELECT nombre
+    FROM reparto_papi_ricky
+);
