@@ -5,6 +5,9 @@ _Parte 2 de la evaluación . La Primera parte está en el documento ejercicio.sq
 #### Datos que tenemos 📜 :
 
 -Tenemos tres tablas vacías
+-Esta Nueva entidad relación se crea porque la relación de las tablas del ejercicio anterior , estaba desnormalizada porque repetía la información.
+
+ASí quedan las nuevas tablas
 
 -ACTORES
 -REPARTO_ACTORES
@@ -12,12 +15,16 @@ _Parte 2 de la evaluación . La Primera parte está en el documento ejercicio.sq
 
 Normalizaremos de acuerdo a la base de dato anterior de teleseries y actores y la base de datos está representada en este diagrama:
 
-![Imagen](./ASSETS/IMAGENES/panel.png)
+![Imagen](./ASSETS/IMG/Diagram.drawio.png)
 
-Por qué se construyó así :
+Las llaves foráneas en reparto_actores 🔑:
+La clave primaria compuesta en reparto_actores evita duplicar la misma pareja actor–teleserie.
 
--Porque un actor puede participar en muchas teleseries:
--Y una teleserie tiene muchos actores.
+Este nuevo modelo de tablas normalizado esta dado a :
+
+-Un actor puede participar en muchas teleseries:
+
+-Una teleserie tiene muchos actores.
 
 Relación: Muchos a Muchos (N:M)
 
